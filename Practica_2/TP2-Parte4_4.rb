@@ -1,13 +1,5 @@
 #NO HACE NADA, NO SE PORQUE
 
-# Suponé que tenés la clase Image detallada más abajo para realizar procesamiento de imágenes.
-# Esta clase representa en sí misma una imagen y dispone de métodos para aplicarle diversos filtros
-# ( filter_a , filter_b , filter_c , filter_d , filter_e y filter_f ) generando y
-# retornando una nueva instancia de Image cada vez que se los invoca. Por ejemplo, el siguiente
-# código toma una imagen inicial y retorna otra instancia de Image que representa la imagen original
-# con los filtros A , C y E aplicados:
-
-
 require 'matrix'
 class Image
   attr_accessor :data, :size, :filters
