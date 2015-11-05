@@ -13,6 +13,8 @@ class Image
     puts Matrix.rows([data.first(size)])
   end
   # Distintos filtros de imágenes:
+
+  #SIEMPRE LE ESTOY DEVOLVIENDO UNA IMAGEN NUEVA
   def filter_a
     filters << (Proc.new {Image.new data.map { |e| e ** 1.2 }})
     self
