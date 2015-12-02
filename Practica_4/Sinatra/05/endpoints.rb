@@ -1,23 +1,13 @@
-require "bundler"
 Bundler.require
 
-helpers do
+require_relative "../middlewares/CountX"
+require_relative "../middlewares/CrossOutNumbers"
 
-end
+use CrossOutNumbers
+use CountX
 
 get '/' do
 
-# body = ['<h1> Opciones </h1>
-# <ul>
-# 	<li>"/mcm/:a/:b  calcula y presenta el mínimo común múltiplo de los valores numéricos :a y :b" </li>
-# 	<li>"/mcd/:a/:b  calcula y presenta el máximo común divisor de los valores numéricos :a y :b" </li>
-# 	<li>"/sum/*  calcula la sumatoria de todos los valores numéricos recibidos como parámetro en el splat" </li>
-# 	<li>"/even/*  presenta la cantidad de números pares que hay entre los valores
-# 		numéricos recibidos como parámetro en el splat"</li>
-# 	<li>"/random  presenta un número al azar "</li>
-# 	<li>"/random/:lower/:upper  presenta un número al azar entre  :lower  y  :upper  (dos valores numéricos)"</li>
-# </ul>'];
-# 	[200, {}, body]
   body = []
   Sinatra::Application.each_route do |route|
     body.push("#{route.verb} #{route.path}<br>")
